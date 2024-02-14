@@ -3,6 +3,6 @@
     hosts : all 
     vars_files : filevars.yaml
     tasks :
-      - name : "This is from global" 
+      - name : "This is from file" 
         debug :
           msg : "{{A}}"
