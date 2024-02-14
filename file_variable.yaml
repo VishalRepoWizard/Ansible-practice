@@ -1,0 +1,8 @@
+--- 
+  - name : "This playbook for file variable" 
+    hosts : all 
+    vars_files : filevars.yaml
+    tasks :
+      - name : "This is from global" 
+        debug :
+          msg : "{{A}}"
