@@ -1,0 +1,10 @@
+--- 
+  - name : "This playbook for global variable" 
+    hosts : all 
+    vars :
+      A : www.google.com
+    
+    tasks :
+      - name : "This is from global" 
+        debug :
+          msg : "{{A}}"
