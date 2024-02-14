@@ -1,10 +1,10 @@
 --- 
-  - name : "This playbook for promt variable" 
+  - name : "This playbook for prompt variable" 
     hosts : all
-    vars_promt :
+    vars_prompt :
       - name : A
-        promt : "Enter a URL:"
+        prompt : "Enter a URL:"
     tasks :
-      - name : "This is from Promt" 
+      - name : "This is from Prompt" 
         debug :
           msg : "{{A}}"
