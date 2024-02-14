@@ -1,0 +1,11 @@
+---
+- name : My Ansible Message playbook
+  hosts : all
+  tasks :
+    - name : first Message
+      debug :
+        msg : "Hello, this is a debug message from Ansible-Master"
+    - name : second message
+      debug :
+        msg : "Hello world"
+...
