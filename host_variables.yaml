@@ -1,0 +1,7 @@
+--- 
+  - name : "This playbook for local variable" 
+    hosts : all
+    tasks :
+      - name : "This is from local" 
+        debug :
+          msg : "{{A}}"
