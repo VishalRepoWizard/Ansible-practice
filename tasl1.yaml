@@ -5,4 +5,4 @@
     tasks :
       - name : "This is from local" 
         debug :
-          msg : {{ansible_python_version}}
+          msg : {ansible_python_version}
