@@ -1,8 +1,11 @@
 --- 
-  - name : "This playbook for local variable" 
+  - name : "This playbook for some information" 
     hosts : all
     become : true
     tasks :
-      - name : "This is from local" 
+      - name : "Python version" 
         debug :
           msg : {ansible_python_version}
+      - name : "region" 
+        debug :
+          msg : {ansible_domain}
