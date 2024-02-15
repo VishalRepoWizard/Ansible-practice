@@ -5,7 +5,7 @@
     tasks :
       - name : "Python version" 
         debug :
-          msg : {ansible_python_version}
+          msg : "{{ansible_python_version}}"
       - name : "region" 
         debug :
-          msg : {ansible_domain}
+          msg : "{{ansible_domain}}"
