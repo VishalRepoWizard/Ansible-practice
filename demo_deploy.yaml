@@ -16,7 +16,7 @@
 
     - name: Deploy Web Application (copy files, adjust as needed)
       ansible.builtin.copy:
-        src: /home/ubuntu/index.html
+        src: /home/ubuntu/
         dest: /var/www/html/
       notify: Restart Nginx
 
