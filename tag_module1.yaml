@@ -1,0 +1,17 @@
+--- 
+  - name: This is Package Module Task 
+    hosts: all
+    become: true 
+    tasks:
+      - name: Install web server 
+        package:
+          name: apache2
+          state: latest
+          update_cache: yes
+        tags: Install
+      - name: start web server
+        systemd:
+          name: apache2
+          state: started
+        tags: start
+...
