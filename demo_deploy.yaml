@@ -1,7 +1,7 @@
 ---
 - name: Web Server Deployment
-  hosts: your_server_group
-  become: yes  # This is used to run tasks as a privileged user (e.g., root)
+  hosts: all
+  become: true # This is used to run tasks as a privileged user (e.g., root)
 
   tasks:
     - name: Install Nginx
