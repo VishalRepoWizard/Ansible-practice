@@ -7,3 +7,7 @@
         package:
         - name: apache2
           state: latest
+      - name: start web server
+        systemd:
+        - name: apache2
+          state: started
