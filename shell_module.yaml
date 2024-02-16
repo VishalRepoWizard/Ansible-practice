@@ -1,0 +1,10 @@
+--- 
+  - name: This is shell module 
+    hosta: all 
+    become: true 
+    tasks:
+      - shell: echo "This message from Ansible Master" > /mnt/shell.txt
+      - name: Thsi is first shell tasks
+        debug:
+          msg: "{{ansible_distribution}}"
+...
