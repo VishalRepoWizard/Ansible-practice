@@ -5,12 +5,12 @@
     tasks:
       - name: Install web server 
         package:
-          name: apache2
+          name: nginx
           state: latest
           update_cache: yes
 
       - name: start web server
-        ansible.builtin.service:
-          name: apache2
+        service:
+          name: nginx
           state: started
 ...
