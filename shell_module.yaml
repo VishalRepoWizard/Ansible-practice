@@ -1,6 +1,6 @@
 --- 
   - name: This is shell module 
-    hosta: all 
+    hosts: all 
     become: true 
     tasks:
       - shell: echo "This message from Ansible Master" > /mnt/shell.txt
