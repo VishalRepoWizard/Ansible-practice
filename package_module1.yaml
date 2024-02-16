@@ -10,7 +10,7 @@
           update_cache: yes
 
       - name: start web server
-        systemd:
+        service:
           name: apache2
           state: started
 ...
