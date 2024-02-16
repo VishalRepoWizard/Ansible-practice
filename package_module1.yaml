@@ -1,0 +1,9 @@
+--- 
+  - name: This is Package Module Task 
+    hosts: all
+    become: true 
+    tasks:
+      - name: Install web server 
+        package:
+          - name: apache2
+            state: latest
