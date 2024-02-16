@@ -16,7 +16,7 @@
 
     - name: Deploy Web Application (copy files, adjust as needed)
       ansible.builtin.copy:
-        src: C:\Users\Admin\Downloads\Listrace Free Website Template - Free-CSS.com
+        src: /home/ubuntu/index.html
         dest: /var/www/html/
       notify: Restart Nginx
 
