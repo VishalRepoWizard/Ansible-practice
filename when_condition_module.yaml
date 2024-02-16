@@ -1,0 +1,13 @@
+--- 
+  - name: This is when condition module
+    hosts: all
+    become: true 
+    tasks:
+      - name: Print centos
+        debug:
+          msg: This is CentOS 
+        when: ansible_os_family=="RedHat"
+      - name: Print Ubuntu
+        debug:
+          msg: This is Ubuntu
+        when: ansible_os_family=="Debian"
