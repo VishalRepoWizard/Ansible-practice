@@ -1,0 +1,25 @@
+---
+- name: Web Server Deployment
+  hosts: your_server_group
+  become: yes  # This is used to run tasks as a privileged user (e.g., root)
+
+  tasks:
+    - name: Install Nginx
+      ansible.builtin.package:
+        name: nginx
+        state: present
+
+    - name: Ensure Nginx service is started
+      ansible.builtin.service:
+        name: nginx
+        state: started
+
+    - name: Deploy Web Application (copy files, adjust as needed)
+      ansible.builtin.copy:
+        src: C:\Users\Admin\Downloads\Listrace Free Website Template - Free-CSS.com
+        dest: /var/www/html/
+      notify: Restart Nginx
+
+#   - name: Uninstall Nginx
+#       name: nginx
+ #       state: absent
