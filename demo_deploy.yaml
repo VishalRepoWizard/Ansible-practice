@@ -23,3 +23,8 @@
 #   - name: Uninstall Nginx
 #       name: nginx
  #       state: absent
+  handlers:
+    - name: Restart Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: restarted
