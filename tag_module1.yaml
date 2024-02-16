@@ -5,13 +5,17 @@
     tasks:
       - name: Install web server 
         package:
-          name: apache2
+          name: nginx
           state: latest
           update_cache: yes
         tags: Install
       - name: start web server
         service:
-          name: apache2
+          name: nginx
           state: started
         tags: start
+      - name: enable web server
+        service:
+          name: nginx
+          state: enable
 ...

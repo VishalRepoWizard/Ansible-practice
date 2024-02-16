@@ -11,7 +11,7 @@
   
     - name: install web package
       package:
-        name: apache2
+        name: nginx
         state: latest
         update_cache: yes
       when: ansible_os_family == "Debian"
@@ -22,9 +22,9 @@
         state: started
       when: ansible_os_family == "RedHat"
 
-    - name: start apache2
+    - name: start nginx
       service:
-        name: apache2
+        name: nginx
         state: started
       when: ansible_os_family == "Debian"
 ...
