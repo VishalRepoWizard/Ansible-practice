@@ -1,0 +1,27 @@
+---
+- name: Install and Start/Enable Package
+  hosts: all
+  become: yes  # Run tasks with elevated privileges (sudo)
+  tasks:
+    - name: Install Package
+      package:
+        name: apache2  # Replace with the package you want to install
+        state: present
+        update_cache: yes
+
+    - name: Start and Enable Service
+      systemd:
+        name: apache2  # Replace with the service you want to start/enable
+        state: started
+        enabled: yes
+
+    - name: Deploy  
+      file:
+        path: /opt/hi  # Change to your deployment path
+        state: directory
+        mode: '0755'
+
+#    - name: Uninstall Package
+#      package:
+#       name: your_package_name  # Change to the package you want to uninstall
+#       state: absent
