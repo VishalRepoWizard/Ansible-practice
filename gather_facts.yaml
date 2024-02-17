@@ -1,0 +1,12 @@
+---
+- name: my first playbook for testing
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: printing task
+      debug:
+        msg: "Testing from anisble-server"
+    - name: Second debug task
+      debug:
+        msg: "message calling debug module"
+...
