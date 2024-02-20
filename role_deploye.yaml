@@ -1,7 +1,6 @@
----
+
   - name: role_deployment
     hosts: all
     become: true
     role:
       - sample_role
-...
