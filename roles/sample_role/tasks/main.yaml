@@ -1,14 +1,13 @@
-
-  - name: Install Nginx
-    package:
-      - name: nginx 
-        state: present 
-  - name: copying index.html
-    copy:
-      src: index.html
-      dest: /var/www/html/index.html
-    notify: 
-      - startingnginx
-  - name: print message
-    debug:
-      msg: "{{A}}"
+- name: installing nginx
+  package:
+    name: nginx
+    state: latest
+- name: copyig index.html
+  copy:
+    src: index.html
+    dest: /var/www/html/index.html
+  notify:
+    - stratingnginx
+- name: print msg
+  debug:
+    msg: "{{A}}"
