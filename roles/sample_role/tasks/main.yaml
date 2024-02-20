@@ -7,7 +7,8 @@
     copy:
       src: index.html
       dest: /var/www/html/index.html
-    notify: startingnginx
+    notify: 
+      - startingnginx
   - name: print message
     debug:
       msg: "{{A}}"
