@@ -1,0 +1,7 @@
+--- 
+  - name: copy modeule first file 
+    hosts: all 
+    become: true 
+    tasks:
+      - name: copy file to tmp file
+        copy: src = test.yml dest = /tmp/ owner=vishal group=vishal mode=644
