@@ -1,0 +1,14 @@
+--- 
+  - name : This is first playbook YML
+    hosts: all 
+    become: true 
+    tasks: 
+      - name: create dummy file in tmp 
+        command: touch /tmp/ansible.txt
+  
+  - name : This is second playbook YML
+    hosts: all 
+    become: true 
+    tasks: 
+      - name: copy hosts file in tmp 
+        command: cp /etc/ansible/hosts /tmp/duplihosts
