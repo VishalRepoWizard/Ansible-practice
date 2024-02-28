@@ -5,8 +5,8 @@
     tasks:
       - name: copy file to tmp file
         copy: 
-          src: /etc/ansible/hosts
-          dest: /tmp/ 
-          owner: vishal 
-          group: vishal 
-          mode: 644
+          src: "/etc/ansible/hosts"
+          dest: "/tmp/" 
+          owner: "vishal" 
+          group: "vishal" 
+          mode: "644"
