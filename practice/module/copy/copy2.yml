@@ -5,7 +5,7 @@
     tasks:
       - name: copy file to tmp file
         copy: 
-          src: test.yml  
+          src: /etc/ansible/hosts
           dest: /tmp/ 
           owner: vishal 
           group: vishal 
