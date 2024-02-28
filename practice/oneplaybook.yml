@@ -1,0 +1,7 @@
+--- 
+  - name : This is one playbook YML
+    hosts: all 
+    become: true 
+    tasks: 
+      - name: create dummy file in tmp 
+        command: touch /tmp/ansibledummy.txt
