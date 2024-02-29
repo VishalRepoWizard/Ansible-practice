@@ -1,0 +1,9 @@
+--- 
+  - name: lookups using inventory file
+    hosts: all #webserver,databaseserver
+    become: true 
+    vars: 
+      ansible_ssh_pass: "{{lookup('csvfile' , 'inventory_file_name file=file_name.csv delimeter = ,' )}}"
+    tasks: 
+    - name: create dummy file
+      command: /tmp/demo.txt

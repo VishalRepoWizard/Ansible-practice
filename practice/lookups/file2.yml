@@ -1,0 +1,9 @@
+--- 
+  - name: lookups using password section
+    hosts: all #webserver,databaseserver
+    become: true 
+    vars: 
+      ansible_ssh_pass: "{{lookup('ini' , 'section_name section=webserver file=credintials.ini' )}}"
+    tasks: 
+    - name: create dummy file
+      command: /tmp/demo.txt
