@@ -1,0 +1,16 @@
+--- 
+  - name: condition module when 
+    hosts: all 
+    become: true
+    vars: 
+      age: 20
+    tasks:
+    - name: create file using variable
+      command: touch /tmp/18.txt
+      when: age == 18
+    - name: create file using variable
+      command: touch /tmp/grater_than_18.txt
+      when: age > 18
+    - name: create file using variable
+      command: touch /tmp/less_than_18.txt
+      when: age < 18
