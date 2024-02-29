@@ -1,0 +1,10 @@
+--- 
+  - name: Asyncronus & polling
+    hosts: all
+    become: true 
+    tasks: 
+    - name: sleep for 60sec 
+      command: sleep 60
+    - name: craete file
+      command: /tmp/sleep.txt
+      
