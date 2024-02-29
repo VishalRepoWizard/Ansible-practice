@@ -7,5 +7,5 @@
     tasks:
     - name: install apache using variable 
       service: 
-        name: "{{servicename}}" 
+        name: " {{servicename}} " 
         state: started
