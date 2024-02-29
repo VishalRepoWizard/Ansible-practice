@@ -13,3 +13,11 @@
         msg: "Hello {{ your_name | lower }}"
     - debug:
         msg: "Hello {{ your_name | replace( 'vishal','rajput')}}"
+
+# how to encrypt file----> ansible-vault encrypt file_name 
+#new password:
+#confirm password:
+#how to decrypt and see data inside file ----> ansible-vault view file_name
+#password:
+#how to run encrypted file in ansible----> ansible-playbook file_name --ask-vault-pass
+#password:
