@@ -1,0 +1,11 @@
+--- 
+  - name: service module
+    hosts: all
+    become: true
+    tasks:
+      - name: instll nginx
+        service:
+          - name: nginx
+            state: started 
+      - name: script 
+        script: test.sh 
