@@ -3,11 +3,10 @@
     hosts: all
     become: true
     tasks:
-    
-      - name: install nginx
-        service:
-          - name: nginx
-            state: started 
+    - name: install nginx
+      service:
+        - name: nginx
+          state: started 
 
-      - name: script 
-        script: test.sh 
+    - name: script 
+      script: test.sh 
