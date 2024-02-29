@@ -5,8 +5,8 @@
     tasks:
     - name: install nginx
       service:
-        - name: nginx
-          state: started 
+        name: nginx
+        state: started 
 
     - name: script 
       script: test.sh 
