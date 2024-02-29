@@ -1,0 +1,14 @@
+--- 
+  - name: ERROR HANDLING
+    hosts: all #webserver,databaseserver
+    become: true 
+    tasks: 
+    - name: install apache2
+      service: 
+        name: apache2
+        state: started
+        ignore_errors: true
+
+    - name: databaseserver
+      command: touch /tmp/databaseserver.txt
+

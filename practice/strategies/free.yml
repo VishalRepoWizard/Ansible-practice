@@ -1,0 +1,12 @@
+--- 
+  - name: Free strategy
+    hosts: all #webserver,databaseserver
+    become: true 
+    strategy: free
+    tasks: 
+    - name: swebserver
+      command: touch /tmp/webserver.txt
+
+    - name: databaseserver
+      command: touch /tmp/databaseserver.txt
+

@@ -1,0 +1,12 @@
+--- 
+  - name: Linear strategy
+    hosts: all #webserver,databaseserver
+    become: true 
+    strategy: Linear
+    tasks: 
+    - name: swebserver
+      command: touch /tmp/webserver.txt
+
+    - name: databaseserver
+      command: touch /tmp/databaseserver.txt
+

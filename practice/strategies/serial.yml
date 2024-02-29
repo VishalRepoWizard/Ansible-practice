@@ -1,0 +1,12 @@
+--- 
+  - name: serial wise execute tasks strategy
+    hosts: all #webserver,databaseserver
+    become: true 
+    serial: 1
+    tasks: 
+    - name: swebserver
+      command: touch /tmp/webserver.txt
+
+    - name: databaseserver
+      command: touch /tmp/databaseserver.txt
+
