@@ -1,0 +1,7 @@
+--- 
+  - name: file in line module
+    hosts: all 
+    become: true 
+    tasks:
+      - name: create dummy file on webserver 
+        lineinfile: path=/tmp/test.txt line="vishal"
