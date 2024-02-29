@@ -1,0 +1,11 @@
+--- 
+  - name: variable module 
+    hosts: all
+    become: true 
+    vars: 
+      servicename: apche2
+    tasks:
+    - name: install apache using variable 
+      service: 
+      - name: {{servicename}} 
+        state: started
