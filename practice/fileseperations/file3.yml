@@ -1,0 +1,10 @@
+--- 
+  - name: file seperation variable
+    hosts: all 
+    become: true 
+    vars_files:
+      - variables.yml
+    tasks:
+#     - include: task1
+#     - include: task2
+      - include: task3

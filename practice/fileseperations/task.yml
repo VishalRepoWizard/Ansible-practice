@@ -1,0 +1,6 @@
+    - name: task1
+      command: touch /tmp/task1.txt
+    - name: task2
+      command: touch /tmp/task2.txt
+    - name: task3
+      command: touch /tmp/task3.txt

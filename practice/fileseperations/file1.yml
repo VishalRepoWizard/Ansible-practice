@@ -1,0 +1,15 @@
+--- 
+  - name: file seperation variable
+    hosts: all 
+    become: true 
+    vars:
+      var1: var1
+      var2: var2
+      var3: var3
+    tasks:
+    - name: task1
+      command: touch /tmp/task1.txt
+    - name: task2
+      command: touch /tmp/task2.txt
+    - name: task3
+      command: touch /tmp/task3.txt
