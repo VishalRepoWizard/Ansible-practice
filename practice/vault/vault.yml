@@ -1,0 +1,15 @@
+--- 
+  - name: Linear strategy
+    hosts: all #webserver,databaseserver
+    become: true 
+    vars: 
+      your_name: vishal
+    tasks: 
+    - debug:
+        msg: "Hello {{ your_name }}"
+    - debug:
+        msg: "Hello {{ your_name | upper }}"
+    - debug:
+        msg: "Hello {{ your_name | lower }}"
+    - debug:
+        msg: "Hello {{ your_name | replace( 'vishal','rajput')}}"
