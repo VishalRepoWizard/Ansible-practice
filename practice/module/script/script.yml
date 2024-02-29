@@ -1,0 +1,7 @@
+--- 
+  - name: script module 
+    hosts: all
+    become: true 
+    tasks: 
+      - name: "create dummy file using script module"
+        script: testscript.sh vishal
