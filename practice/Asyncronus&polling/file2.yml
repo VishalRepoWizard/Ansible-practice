@@ -8,5 +8,5 @@
       async: 70
       poll: 35
     - name: craete file
-      command: /tmp/sleep1.txt
+      command: touch /tmp/sleep1.txt
       
