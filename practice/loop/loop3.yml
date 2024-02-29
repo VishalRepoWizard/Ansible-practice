@@ -1,0 +1,14 @@
+--- 
+  - name: loop2 
+    hosts: all
+    become: true 
+    vars:
+      pkg:
+        - vsftpd
+        - tree
+    tasks:
+    - name: installing
+      apt: 
+        name: "{{ item }}"
+        state: started
+      with_items: "{{ pkg }}"

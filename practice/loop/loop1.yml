@@ -1,0 +1,13 @@
+--- 
+  - name: loop1 
+    hosts: all
+    become: true 
+    tasks:
+    - name: installing
+      apt: 
+        name: vsftpd 
+        state: started
+    - name: installing
+      apt: 
+        name: tree 
+        state: started
