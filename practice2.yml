@@ -1,0 +1,9 @@
+--- 
+- name: Global variable"
+  hosts: all 
+  vars:
+    A: www.google.com
+  tasks:
+  - name: print global variable
+    debug:
+      msg: "{{A}}"
