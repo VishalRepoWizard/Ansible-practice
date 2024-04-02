@@ -1,0 +1,17 @@
+---
+- name: Install nginx
+  hosts: all 
+  become: true
+  tasks:
+      - name: Install web server 
+        package:
+          name: nginx
+          state: latest
+          update_cache: yes
+
+      - name: start web server
+        service:
+          name: nginx
+          state: started
+...
+
