@@ -1,0 +1,7 @@
+--- 
+- name: Message printing playbook
+  hosts: all 
+  tasks:
+  - name: Message 
+    debug:
+      msg: "Hello world"

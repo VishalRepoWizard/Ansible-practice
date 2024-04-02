@@ -1,5 +1,5 @@
 --- 
-  - name: Linear strategy
+  - name: Vault 
     hosts: all #webserver,databaseserver
     become: true 
     vars: 
