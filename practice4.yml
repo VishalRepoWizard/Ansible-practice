@@ -1,0 +1,8 @@
+--- 
+- name: file variable
+  hosts: all
+  vars_files: filevars.yaml
+  tasks:
+  - name: printing from file variable
+    debug:
+      msg: "{{B}}"
