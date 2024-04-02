@@ -1,0 +1,9 @@
+--- 
+- name: Local variable
+  hosts: all 
+  tasks:
+  - name: printing local variable
+    debug:
+      msg: "{{B}}"
+    vars:
+      B: www.amazon.com
